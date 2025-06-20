@@ -8,28 +8,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from test_login import TestLogin
 
-@pytest.fixture
-def login():
+def test_create_modify_delete_product():
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
 
     driver = webdriver.Chrome(options=chrome_options)
-    driver.get("http://localhost:3000/admin/login")
-
-    wait = WebDriverWait(driver, 15)
-    wait.until(EC.presence_of_element_located((By.NAME, "email"))).send_keys("test@test.fr")
-    driver.find_element(By.NAME, "password").send_keys("Blink182")
-    driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
-
-    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'a[href$="/admin/products"]')))
-    yield driver
-    driver.quit()
-
-
-def test_create_modify_delete_product(login):
-    driver = login
     wait = WebDriverWait(driver, 20)
+    TestLogin.login_success(driver)
+
 
     # Aller dans Products
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[href$="/admin/products"]'))).click()

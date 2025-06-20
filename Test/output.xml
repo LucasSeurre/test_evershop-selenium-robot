@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.5 on darwin)" generated="2025-06-19T15:45:55.284528" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Categories" source="/Users/lucasseurre/Desktop/TP/Tp-evershop/Test/test_categories.robot">
+<test id="s1-t1" name="Test Gestion Catégories" line="14">
+<kw name="Open Browser To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:45:55.625369" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/admin/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-19T15:45:55.624968" elapsed="2.431033"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-19T15:45:58.056860" elapsed="0.372948"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:45:55.624259" elapsed="2.805962"/>
+</kw>
+<kw name="Login Admin" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:45:58.432901" level="INFO">Opening url 'http://localhost:3000/admin/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-19T15:45:58.432286" elapsed="0.108600"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:45:58.541106" elapsed="0.036505"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:45:58.578170" level="INFO">Typing text 'test@test.fr' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:45:58.577839" elapsed="0.267291"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:45:58.846041" level="INFO">Typing text 'Blink182' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:45:58.845484" elapsed="0.107861"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=button.button.primary</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:45:58.953520" elapsed="0.020758"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:45:58.974685" level="INFO">Clicking button 'css=button.button.primary'.</msg>
+<arg>css=button.button.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:45:58.974466" elapsed="0.095619"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:45:59.070289" elapsed="0.030360"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:45:58.431278" elapsed="0.669550"/>
+</kw>
+<kw name="Aller à la page Categories">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=a[href$="/admin/categories"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:45:59.101420" elapsed="0.371935"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:45:59.474036" level="INFO">Clicking element 'css=a[href$="/admin/categories"]'.</msg>
+<arg>css=a[href$="/admin/categories"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:45:59.473585" elapsed="0.441778"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Categories</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:45:59.915886" elapsed="0.013836"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:45:59.101142" elapsed="0.828702"/>
+</kw>
+<kw name="Créer une Nouvelle Catégorie">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=a[href$="/admin/categories/new"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:45:59.930459" elapsed="0.023722"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:45:59.954781" level="INFO">Clicking element 'css=a[href$="/admin/categories/new"]'.</msg>
+<arg>css=a[href$="/admin/categories/new"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:45:59.954404" elapsed="0.360865"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input#name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.315558" elapsed="0.017850"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>css=input#name</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.333589" elapsed="0.023229"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:00.357253" level="INFO">Typing text 'Chaussures' into text field 'css=input#name'.</msg>
+<arg>css=input#name</arg>
+<arg>${CATEGORY_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.356995" elapsed="0.099941"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>css=input#urlKey</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.457367" elapsed="0.033413"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:00.491322" level="INFO">Typing text 'Chaussures' into text field 'css=input#urlKey'.</msg>
+<arg>css=input#urlKey</arg>
+<arg>Chaussures</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.491027" elapsed="0.097205"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>css=input#metaTitle</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.588409" elapsed="0.029551"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:00.618409" level="INFO">Typing text 'Chaussures' into text field 'css=input#metaTitle'.</msg>
+<arg>css=input#metaTitle</arg>
+<arg>Chaussures</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.618190" elapsed="0.077640"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>css=input#metakeywords</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.696007" elapsed="0.032791"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:00.729286" level="INFO">Typing text 'Chaussures' into text field 'css=input#metakeywords'.</msg>
+<arg>css=input#metakeywords</arg>
+<arg>Chaussures</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.728989" elapsed="0.106584"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>css=textarea#meta_description</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.835856" elapsed="0.026608"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:00.862934" level="INFO">Typing text 'Chaussures' into text field 'css=textarea#meta_description'.</msg>
+<arg>css=textarea#meta_description</arg>
+<arg>Chaussures</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.862701" elapsed="0.085389"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:00.948648" level="INFO">Clicking element 'css=button.button.primary'.</msg>
+<arg>css=button.button.primary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:00.948350" elapsed="0.085004"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:45:59.930147" elapsed="1.103395"/>
+</kw>
+<kw name="Vérifier Succès Création">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.Toastify__toast--success</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.034540" elapsed="0.231717"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:01.283771" level="INFO">Current page contains text 'Category saved successfully!'.</msg>
+<arg>Category saved successfully!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.266538" elapsed="0.017364"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:46:01.033971" elapsed="0.250057"/>
+</kw>
+<kw name="Modifier la Catégorie">
+<kw name="Aller à la page Categories">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=a[href$="/admin/categories"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.284894" elapsed="0.011499"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:01.296772" level="INFO">Clicking element 'css=a[href$="/admin/categories"]'.</msg>
+<arg>css=a[href$="/admin/categories"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.296577" elapsed="0.138407"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Categories</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.435343" elapsed="0.009442"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:46:01.284646" elapsed="0.160397"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=a.font-semibold[href*="/admin/categories/edit"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.445270" elapsed="0.017126"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:01.462790" level="INFO">Clicking element 'css=a.font-semibold[href*="/admin/categories/edit"]'.</msg>
+<arg>css=a.font-semibold[href*="/admin/categories/edit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.462581" elapsed="0.331463"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input#name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.794248" elapsed="0.013669"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>css=input#name</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.808101" elapsed="0.025207"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:01.834260" level="INFO">Typing text 'Chaussures pour femme' into text field 'css=input#name'.</msg>
+<arg>css=input#name</arg>
+<arg>${UPDATED_CATEGORY_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.833515" elapsed="0.121905"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:01.956200" level="INFO">Clicking element 'css=button.button.primary'.</msg>
+<arg>css=button.button.primary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:01.955780" elapsed="0.083158"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:46:01.284328" elapsed="0.754829"/>
+</kw>
+<kw name="Vérifier Succès Modification">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.Toastify__toast--success</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.040439" elapsed="0.230786"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:02.285512" level="INFO">Current page contains text 'Category saved successfully!'.</msg>
+<arg>Category saved successfully!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.271551" elapsed="0.014195"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:46:02.039628" elapsed="0.246440"/>
+</kw>
+<kw name="Supprimer la Catégorie">
+<kw name="Aller à la page Categories">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=a[href$="/admin/categories"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.287249" elapsed="0.012266"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:02.299920" level="INFO">Clicking element 'css=a[href$="/admin/categories"]'.</msg>
+<arg>css=a[href$="/admin/categories"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.299704" elapsed="0.143025"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Categories</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.443245" elapsed="0.012546"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:46:02.286970" elapsed="0.169082"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${UPDATED_CATEGORY_NAME}</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.456418" elapsed="0.015351"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:02.472338" level="INFO">Clicking element 'css=tr:nth-of-type(2) .checkbox-unchecked'.</msg>
+<arg>css=tr:nth-of-type(2) .checkbox-unchecked</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.472008" elapsed="0.060472"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:02.533166" level="INFO">Clicking element 'xpath=//span[contains(text(),"Delete")]'.</msg>
+<arg>xpath=//span[contains(text(),"Delete")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.532830" elapsed="0.064162"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Delete 1 categories</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.597171" elapsed="0.009227"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=button.critical</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.606566" elapsed="0.238273"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:02.845375" level="INFO">Clicking element 'css=button.critical'.</msg>
+<arg>css=button.critical</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.845086" elapsed="0.084411"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-19T15:46:04.930903" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-19T15:46:02.930171" elapsed="2.000929"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:46:02.286535" elapsed="2.644891"/>
+</kw>
+<kw name="Vérifier Suppression">
+<kw name="Aller à la page Categories">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=a[href$="/admin/categories"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T15:46:04.933337" elapsed="0.016568"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:04.950351" level="INFO">Clicking element 'css=a[href$="/admin/categories"]'.</msg>
+<arg>css=a[href$="/admin/categories"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:04.950122" elapsed="0.122708"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Categories</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T15:46:05.073538" elapsed="0.009327"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:46:04.932909" elapsed="0.150073"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:05.083352" level="INFO">Typing text 'Chaussures pour femme' into text field 'css=input#name'.</msg>
+<arg>css=input#name</arg>
+<arg>${UPDATED_CATEGORY_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:05.083106" elapsed="0.106761"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:05.191215" level="INFO">Sending key(s) ('RETURN',) to css=input#name element.</msg>
+<msg time="2025-06-19T15:46:05.525570" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-06-19T15:46:05.526018" level="INFO">Releasing special key RETURN.</msg>
+<arg>css=input#name</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-19T15:46:05.190262" elapsed="0.530214"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-19T15:46:06.722129" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-19T15:46:05.720795" elapsed="1.001880"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-06-19T15:46:06.742064" level="INFO">${resultats} = 0</msg>
+<var>${resultats}</var>
+<arg>css=table.listing tbody tr:has(td)</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-06-19T15:46:06.723309" elapsed="0.018829"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${resultats}</arg>
+<arg>${0}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-19T15:46:06.742407" elapsed="0.001007"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:46:04.932230" elapsed="1.811314"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-19T15:46:06.744152" elapsed="0.166669"/>
+</kw>
+<status status="PASS" start="2025-06-19T15:45:55.623254" elapsed="11.287813"/>
+</test>
+<status status="PASS" start="2025-06-19T15:45:55.285835" elapsed="11.626418"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Categories" id="s1" pass="1" fail="0" skip="0">Test Categories</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
